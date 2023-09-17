@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Tracker | GYM Toolz</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/utensils/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/utensils/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/utensils/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/utensils/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/utensils/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/assets/utensils/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/assets/utensils/site.webmanifest">
+    <meta name="description"
+        content="Track your calorie intake and stay on top of your fitness goals with GYM Toolz's online calorie tracker. Use our free web tool to monitor your daily calorie intake and achieve your fitness goals.">
+    <meta name="author" content="GYM Toolz">
+    <meta name="keywords" content="calorie tracker, fitness, workout planner, calorie calculator, GYM Toolz">
+    <link rel="canonical" href="https://www.gymtoolz.com/">
+    <script src="/js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/quagga@0.12.1/dist/quagga.min.js"></script>
+    <script src="/js/calorietracker.js" defer></script>
+    <script src="/js/dd3de96bc3.js" defer></script>
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "WebSite",
+                "name": "GYM Toolz",
+                "url": "https://gymtoolz.com/"
+            }
+    </script>
+</head>
+
+<body>
+    <main class="main" style="display: flex; align-items: center; justify-content: center;">
+        <h1 style="max-width: 60vh; font-weight: 800;">
+            PLEASE ENABLE JAVASCRIPT OR THIS WEBSITE WILL NOT WORK</h1>
+    </main>
+
+    <main class="calorietracker">
+        <h1 class="calorietracker__h1">Calorie Tracker</h1>
+        <form class="calorietracker__form">
+            <label class="calorietracker__form__label" for="food">Food:</label>
+            <input class="calorietracker__form__input" type="text" id="food" name="food">
+            <label class="calorietracker__form__label" for="calories">Calories:</label>
+            <input class="calorietracker__form__input" type="number" id="calories" name="calories">
+            <button class="calorietracker__form__button" type="submit"><i class="fa-solid fa-square-plus"></i> Add
+                Calories</button>
+
+            <button class="calorietracker__form__button" type="button" id="popularFoodSearchButton">
+                <i class="fa-solid fa-search"></i> Search Popular Foods
+            </button>
+            <div id="popularFoodSearchModal" class="modal">
+                <div class="modal-content">
+                    <span id="popularFoodSearchClose" class="modal-close">&times;</span>
+                    <div id="popularFoodSearchResults" class="popular-food-search-results"></div>
+                </div>
+            </div>
+
+
+            <div id="barcodeScanner" class="barcode-scanner"></div>
+            <button class="calorietracker__form__button" type="button" id="barcodeScannerButton"><i
+                    class="fa-solid fa-camera"></i> Scan Barcode</button>
+        </form>
+        <div class="calorietracker__quickadd">
+            <button class="calorietracker__quickadd__button" type="button" data-calories="25">25 Calories</button>
+            <button class="calorietracker__quickadd__button" type="button" data-calories="50">50 Calories</button>
+            <button class="calorietracker__quickadd__button" type="button" data-calories="100">100 Calories</button>
+            <button class="calorietracker__quickadd__button" type="button" data-calories="150">150 Calories</button>
+            <button class="calorietracker__quickadd__button" type="button" data-calories="200">200 Calories</button>
+            <button class="calorietracker__quickadd__button" type="button" data-calories="250">250 Calories</button>
+        </div>
+        <button class="calorietracker__form__button calorietracker__form__button--reset" type="reset">Reset
+            Counter</button>
+        <div class="calorietracker__total">
+            <span>Total Calories:</span>
+            <span class="calorietracker__total--value">0</span>
+        </div>
+        <ul class="calorietracker__list"></ul>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+@use '../abstracts/variables';
+
+.footer {
+    background-color: variables.$secondary-color;
+    color: variables.$text-color;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    box-shadow: 0 -0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+
+    a {
+        color: variables.$primary-color;
+        font-weight: 700;
+
+        &:hover {
+            color: variables.$text-color;
+        }
+    }
+}

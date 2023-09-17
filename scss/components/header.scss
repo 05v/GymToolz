@@ -1,0 +1,135 @@
+@use '../abstracts/variables';
+
+.header {
+    background-color: variables.$secondary-color;
+    color: variables.$text-color;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+
+    &--main {
+        margin-bottom: 2rem;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: variables.$text-color;
+        font-weight: 700;
+
+        &:hover {
+            color: variables.$primary-color;
+        }
+    }
+
+    &__icon {
+        margin-right: 1rem;
+        margin-left: 3rem;
+        box-sizing: border-box;
+    }
+
+    &__menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-right: 3rem;
+
+        &-item {
+            margin: 0 1rem;
+        }
+
+        &-link {
+            color: variables.$text-color;
+            text-decoration: none;
+
+            &:hover {
+                color: variables.$primary-color;
+            }
+
+            &--external {
+                font-weight: 700;
+            }
+        }
+
+        &--open {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background-color: variables.$secondary-color;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            padding: 2rem 0;
+        }
+    }
+
+    &__toggle {
+        display: none;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__toggle-icon {
+        font-size: 2rem;
+    }
+
+    @media screen and (max-width: 1000px) {
+        &__menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background-color: variables.$secondary-color;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            padding: 2rem 0;
+        }
+
+        &__menu-item {
+            margin: 1rem 0;
+        }
+
+        &__toggle {
+            display: block;
+        }
+
+        &__logo {
+            margin-left: 3rem;
+        }
+
+        &__icon {
+            margin-left: 0;
+        }
+
+        &__toggle-icon {
+            color: variables.$text-color;
+            margin-right: 3rem;
+            font-size: 2.2rem;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        &__menu--open {
+            display: flex;
+        }
+    }
+}

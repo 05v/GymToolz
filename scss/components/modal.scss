@@ -1,0 +1,37 @@
+@use '../abstracts/variables';
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    &-content {
+        background-color: variables.$background-color;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid variables.$text-color;
+        width: 80%;
+    }
+
+    &-close {
+        color: variables.$text-color;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+
+        &:hover,
+        &:focus {
+            color: variables.$primary-color;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}

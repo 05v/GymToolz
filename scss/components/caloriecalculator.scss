@@ -1,0 +1,165 @@
+@use '../abstracts/variables';
+
+.caloriecalculator {
+    font-family: 'Open Sans', sans-serif;
+    color: variables.$text-color;
+    background-color: variables.$background-color;
+    min-height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+
+    &__title {
+        font-size: 3.6rem;
+        font-weight: 700;
+        color: variables.$primary-color;
+        margin-bottom: 3rem;
+    }
+
+    &__paragraph {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30rem;
+
+        label {
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="number"],
+        select {
+            padding: 1rem;
+            border-radius: 0.8rem;
+            border: none;
+            background-color: #f0f0f0;
+            ;
+            border: 0.1rem solid variables.$primary-color;
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: variables.$text-color;
+            width: 100%;
+            max-width: 100%;
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0.5rem variables.$primary-color;
+            }
+        }
+
+        select {
+            appearance: none;
+            padding-right: 2rem;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E") no-repeat;
+            background-position: right 1rem center;
+        }
+    }
+
+    &__gender {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+    }
+
+    &__gender-button {
+        padding: 1rem 2rem;
+        border-radius: 0.8rem;
+        border: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: variables.$text-color;
+        background-color: #f0f0f0;
+        ;
+        border: 0.1rem solid variables.$primary-color;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: variables.$primary-color;
+            color: variables.$background-color;
+        }
+
+        &--active {
+            background-color: variables.$primary-color;
+            color: variables.$background-color;
+        }
+    }
+
+    &__button {
+        padding: 1.2rem 2rem;
+        border-radius: 0.8rem;
+        border: none;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: variables.$background-color;
+        background-color: variables.$primary-color;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: variables.$secondary-color;
+            color: variables.$text-color;
+        }
+    }
+
+    &__result {
+        margin-top: 2rem;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: variables.$primary-color;
+        text-align: center;
+    }
+
+    &__table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+        font-size: 16px;
+
+        & thead {
+            background-color: variables.$primary-color;
+            color: #fff;
+        }
+
+        & th,
+        & td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid;
+        }
+
+        & tr:nth-child(even) {
+            background-color: variables.$background-color;
+        }
+    }
+
+    &__header {
+        color: variables.$primary-color;
+    }
+
+    &__paragraph,
+    &__cell {
+        color: variables.$text-color;
+    }
+
+    &__usHeight {
+        display: flex;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    & input {
+        width: inherit;
+    }
+}

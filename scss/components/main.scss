@@ -1,0 +1,78 @@
+@use '../abstracts/variables';
+
+.main {
+    min-height: calc(100vh - 150px);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        font-size: 3.6rem;
+        font-weight: 700;
+        color: variables.$primary-color;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    &__description {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: variables.$text-color;
+        margin-bottom: 3rem;
+        text-align: center;
+        max-width: 75vh;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3rem;
+        gap: 1.8rem;
+    }
+
+    &__button {
+        padding: 1.6rem 2.4rem;
+        border-radius: 0.8rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        color: variables.$primary-color;
+        background-color: variables.$background-color;
+        border: 0.2rem solid variables.$primary-color;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        min-width: 21rem;
+
+        &:hover {
+            background-color: variables.$primary-color;
+            color: variables.$background-color;
+            border-color: variables.$primary-color;
+        }
+    }
+
+    &__descriptions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__description-title {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: variables.$primary-color;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    &__description-text {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: variables.$text-color;
+        margin-bottom: 3rem;
+        text-align: center;
+        max-width: 75vh;
+    }
+}

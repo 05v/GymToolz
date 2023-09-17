@@ -1,0 +1,735 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #F6F5F5;
+  color: #276678;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.header {
+  background-color: #D3E0EA;
+  color: #276678;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+.header--main {
+  margin-bottom: 2rem;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #276678;
+  font-weight: 700;
+}
+.header__logo:hover {
+  color: #1687A7;
+}
+.header__icon {
+  margin-right: 1rem;
+  margin-left: 3rem;
+  box-sizing: border-box;
+}
+.header__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-right: 3rem;
+}
+.header__menu-item {
+  margin: 0 1rem;
+}
+.header__menu-link {
+  color: #276678;
+  text-decoration: none;
+}
+.header__menu-link:hover {
+  color: #1687A7;
+}
+.header__menu-link--external {
+  font-weight: 700;
+}
+.header__menu--open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: #D3E0EA;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem 0;
+}
+.header__toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.header__toggle:focus {
+  outline: none;
+}
+.header__toggle-icon {
+  font-size: 2rem;
+}
+@media screen and (max-width: 1000px) {
+  .header__menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #D3E0EA;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem 0;
+  }
+  .header__menu-item {
+    margin: 1rem 0;
+  }
+  .header__toggle {
+    display: block;
+  }
+  .header__logo {
+    margin-left: 3rem;
+  }
+  .header__icon {
+    margin-left: 0;
+  }
+  .header__toggle-icon {
+    color: #276678;
+    margin-right: 3rem;
+    font-size: 2.2rem;
+  }
+  .header:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  .header__menu--open {
+    display: flex;
+  }
+}
+
+.footer {
+  background-color: #D3E0EA;
+  color: #276678;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  box-shadow: 0 -0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.footer a {
+  color: #1687A7;
+  font-weight: 700;
+}
+.footer a:hover {
+  color: #276678;
+}
+
+.main {
+  min-height: calc(100vh - 150px);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #1687A7;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.main__description {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #276678;
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 75vh;
+}
+.main__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 1.8rem;
+}
+.main__button {
+  padding: 1.6rem 2.4rem;
+  border-radius: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  color: #1687A7;
+  background-color: #F6F5F5;
+  border: 0.2rem solid #1687A7;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  min-width: 21rem;
+}
+.main__button:hover {
+  background-color: #1687A7;
+  color: #F6F5F5;
+  border-color: #1687A7;
+}
+.main__descriptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__description-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1687A7;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.main__description-text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #276678;
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 75vh;
+}
+
+.caloriecalculator {
+  font-family: "Open Sans", sans-serif;
+  color: #276678;
+  background-color: #F6F5F5;
+  min-height: calc(100vh - 130px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+}
+.caloriecalculator__title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #1687A7;
+  margin-bottom: 3rem;
+}
+.caloriecalculator__paragraph {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.caloriecalculator__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+}
+.caloriecalculator__form label {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.caloriecalculator__form input[type=number],
+.caloriecalculator__form select {
+  padding: 1rem;
+  border-radius: 0.8rem;
+  border: none;
+  background-color: #f0f0f0;
+  border: 0.1rem solid #1687A7;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #276678;
+  width: 100%;
+  max-width: 100%;
+}
+.caloriecalculator__form input[type=number]:focus,
+.caloriecalculator__form select:focus {
+  outline: none;
+  box-shadow: 0 0 0.5rem #1687A7;
+}
+.caloriecalculator__form select {
+  appearance: none;
+  padding-right: 2rem;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E") no-repeat;
+  background-position: right 1rem center;
+}
+.caloriecalculator__gender {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.caloriecalculator__gender-button {
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #276678;
+  background-color: #f0f0f0;
+  border: 0.1rem solid #1687A7;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.caloriecalculator__gender-button:hover {
+  background-color: #1687A7;
+  color: #F6F5F5;
+}
+.caloriecalculator__gender-button--active {
+  background-color: #1687A7;
+  color: #F6F5F5;
+}
+.caloriecalculator__button {
+  padding: 1.2rem 2rem;
+  border-radius: 0.8rem;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #F6F5F5;
+  background-color: #1687A7;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.caloriecalculator__button:hover {
+  background-color: #D3E0EA;
+  color: #276678;
+}
+.caloriecalculator__result {
+  margin-top: 2rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1687A7;
+  text-align: center;
+}
+.caloriecalculator__table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.caloriecalculator__table thead {
+  background-color: #1687A7;
+  color: #fff;
+}
+.caloriecalculator__table th, .caloriecalculator__table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid;
+}
+.caloriecalculator__table tr:nth-child(even) {
+  background-color: #F6F5F5;
+}
+.caloriecalculator__header {
+  color: #1687A7;
+}
+.caloriecalculator__paragraph, .caloriecalculator__cell {
+  color: #276678;
+}
+.caloriecalculator__usHeight {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+.caloriecalculator input {
+  width: inherit;
+}
+
+.calorietracker {
+  font-family: "Open Sans", sans-serif;
+  color: #276678;
+  background-color: #F6F5F5;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 8rem - 7rem);
+}
+.calorietracker__h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.calorietracker__form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  width: 95vh;
+}
+.calorietracker__form__label {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.calorietracker__form__input {
+  padding: 1rem;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+}
+.calorietracker__form__input:focus {
+  outline: none;
+  box-shadow: 0px 0px 4px #1687A7;
+}
+.calorietracker__form__button {
+  background-color: #1687A7;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.calorietracker__form__button:hover {
+  background-color: #10637a;
+}
+.calorietracker__form__button--reset {
+  margin-bottom: 1.5rem;
+}
+.calorietracker__quickadd {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  width: 95vh;
+}
+.calorietracker__quickadd__button {
+  background-color: #D3E0EA;
+  color: #276678;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.calorietracker__quickadd__button:hover {
+  background-color: #b0c8da;
+}
+.calorietracker__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 95vh;
+}
+.calorietracker__list__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  background-color: #ececec;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 4px;
+}
+.calorietracker__list__item__name {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.calorietracker__list__item__calories {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #1687A7;
+}
+.calorietracker__list__item__delete {
+  background-color: #D3E0EA;
+  color: #276678;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.calorietracker__list__item__delete:hover {
+  background-color: #b0c8da;
+}
+.calorietracker__total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  width: 95vh;
+}
+.calorietracker__total--value {
+  color: #1687A7;
+  font-weight: 700 !important;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+  background-color: #F6F5F5;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #276678;
+  width: 80%;
+}
+.modal-close {
+  color: #276678;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}
+.modal-close:hover, .modal-close:focus {
+  color: #1687A7;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.barcode-scanner {
+  width: 640px;
+  height: 480px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.popular-food-search-results__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #D3E0EA;
+  padding: 20px;
+  margin: 1rem;
+  border-radius: 10px;
+}
+.popular-food-search-results__itemCaloriesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.popular-food-search-results__item__image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 2rem;
+}
+.popular-food-search-results__item__calories {
+  font-weight: 700;
+}
+.popular-food-search-results__item__name {
+  font-weight: 600;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 20rem;
+}
+.popular-food-search-results__item__name, .popular-food-search-results__item__calories {
+  color: #276678;
+}
+.popular-food-search-results__item__add, .popular-food-search-results__item__cancel {
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 6.6rem;
+}
+.popular-food-search-results__item__add {
+  background-color: #1687A7;
+  color: white;
+}
+.popular-food-search-results__item__add:hover {
+  background-color: #10637a;
+}
+.popular-food-search-results__item__cancel {
+  background-color: #7da3c1;
+  color: white;
+}
+.popular-food-search-results__item__cancel:hover {
+  background-color: #5a8bb0;
+}
+
+@media screen and (max-width: 1100px) {
+  .popular-food-search-results__item__button-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .calorietracker {
+    padding: 3rem;
+  }
+  .calorietracker__form {
+    width: 100%;
+  }
+  .calorietracker__quickadd {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .calorietracker__quickadd__button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    min-width: 11rem;
+  }
+  .calorietracker__list {
+    width: 100%;
+  }
+  .calorietracker__total {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .popular-food-search-results__item__name {
+    font-weight: 600;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main__button {
+    margin-bottom: 2rem;
+  }
+  .main__button--calorie {
+    margin-right: 0;
+  }
+  .main__button:last-child {
+    margin-bottom: 0;
+  }
+  .main__description-title {
+    margin-top: 0rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .popular-food-search-results__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .popular-food-search-results__item__add, .popular-food-search-results__item__cancel {
+    padding: 10px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    min-width: 12rem;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 500px) {
+  .calorietracker__list {
+    width: 100%;
+  }
+  .calorietracker__list__item__time {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .calorietracker__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .calorietracker__list__item {
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .popular-food-search-results__item__image {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .main__button {
+    white-space: normal;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: min-content;
+    width: auto;
+  }
+  .main__button i {
+    display: none;
+  }
+  .calorietracker__total {
+    display: flex;
+    flex-direction: column;
+  }
+  .header__title {
+    display: none;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .popular-food-search-results__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: #F6F5F5;
+  }
+  .popular-food-search-results__item__add, .popular-food-search-results__item__cancel {
+    padding: 10px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    min-width: max-content;
+    font-weight: 600;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,70 @@
+@use '../abstracts/variables';
+
+.popular-food-search-results__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: variables.$secondary-color;
+    padding: 20px;
+    margin: 1rem;
+    border-radius: 10px;
+
+    &CaloriesWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 2rem;
+    }
+
+    &__calories {
+        font-weight: 700;
+    }
+
+    &__name {
+        font-weight: 600;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        width: 20rem;
+    }
+
+    &__name,
+    &__calories {
+        color: variables.$text-color;
+    }
+
+    &__add,
+    &__cancel {
+        padding: 5px 10px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        min-width: 6.6rem
+    }
+
+    &__add {
+        background-color: variables.$primary-color;
+        color: white;
+
+        &:hover {
+            background-color: darken(variables.$primary-color, 10%);
+        }
+    }
+
+    &__cancel {
+        background-color: darken(variables.$secondary-color, 25%);
+        color: white;
+
+        &:hover {
+            background-color: darken(variables.$secondary-color, 35%);
+        }
+    }
+}
